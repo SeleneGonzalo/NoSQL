@@ -72,7 +72,7 @@ Randombutton.addEventListener('click', function(e) {
         method: 'POST',  
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
-          title: data[0].title,
+          title: "TADW Presenta: " + data[0].title,
           fullplot: data[1].fullplot,
           cast: data[2].cast,
           poster: data[3].poster,

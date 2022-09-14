@@ -44,5 +44,21 @@ h2 {
 }
 
 body {
-    background-color: #cccccc;
+    background-color: #FFFAE9;
 }
+
+.container{
+    margin: 0 0 1rem;
+    height: 10rem;
+    display: flex;
+    align-items: start;
+    justify-content: left;
+    margin-top: 160px;
+}
+
+.child {
+    justify-content: center;
+    align-items: center;
+}
+
+
