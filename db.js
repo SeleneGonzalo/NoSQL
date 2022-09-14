@@ -50,7 +50,9 @@ const getPelis = () => {
 
 const getFilms = (title) => {
   const filter = {
-   'title':{$regex: new RegExp (title)}
+    '$text': {
+      '$search': title
+    }
   };
   const projection = {
     '_id': 0,

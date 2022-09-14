@@ -29,7 +29,7 @@ function existTomatoe (item){
     item.tomatoe.critic.rating !== undefined){
     return item.tomatoe.critic.rating
   } else{
-    return null;
+    return "desconocido"  ;
   }
 }
 
@@ -37,7 +37,7 @@ function existIMDB (item){
   if (item.imdb !== undefined && item.imdb.rating !== undefined){
     return item.imdb.rating
   } else {
-    return null;
+    return "desconocido";
   }
 }
 
@@ -51,7 +51,7 @@ router.get('/peliculas', (req, res) => {
         fullplot: item.fullplot,
         imdb : existIMDB(item),
         tomatoes : existTomatoe(item),
-        metacritic: item.metacritic,
+        metacritic: item.metacritic || "desconocido",
       }))
       res.json(items)
     })
