@@ -61,4 +61,7 @@ body {
     align-items: center;
 }
 
+img {
+    max-width: 70px;
+}
 
