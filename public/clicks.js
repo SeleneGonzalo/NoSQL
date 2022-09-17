@@ -41,6 +41,9 @@ Searchbutton.addEventListener('click', function(e) {
       let lista = "";
       data.forEach((peli)=>
       {
+          if (peli.poster !== "desconocido"){
+            lista = lista + '<img src="'+peli.poster+'" alt="poster">';
+          }
           lista = lista + "<p>" + peli.title + " (" + peli.year + ")" + "</p>" + peli.fullplot + "</p>" + "IMDB rating " + peli.imdb + "</p>" + "Tomatoes rating " + peli.tomatoes + "</p>" + "Metacritic rating " + peli.metacritic + "</p>";
       })
       const divRes = document.getElementById("resultados");

@@ -46,6 +46,7 @@ router.get('/peliculas', (req, res) => {
   getFilms(req.query.title)
     .then((items) => {
       items = items.map((item) => ({
+        poster: item.poster || "desconocido",
         title: item.title,
         year: item.year,
         fullplot: item.fullplot,

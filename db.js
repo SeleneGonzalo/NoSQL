@@ -56,6 +56,7 @@ const getFilms = (title) => {
   };
   const projection = {
     '_id': 0,
+    'poster': 1,
     'title': 1, 
     'year': 1,
     'fullplot' : 1,
