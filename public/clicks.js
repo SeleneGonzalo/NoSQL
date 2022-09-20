@@ -41,10 +41,10 @@ Searchbutton.addEventListener('click', function(e) {
       let lista = "";
       data.forEach((peli)=>
       {
+          lista = lista + "<p>" + peli.title + " (" + peli.year + ")" + "</p>" + peli.fullplot + "</p>" + "IMDB rating " + peli.imdb + "</p>" + "Tomatoes rating " + peli.tomatoes + "</p>" + "Metacritic rating " + peli.metacritic + "</p>";
           if (peli.poster !== "desconocido"){
             lista = lista + '<img src="'+peli.poster+'" alt="poster">';
           }
-          lista = lista + "<p>" + peli.title + " (" + peli.year + ")" + "</p>" + peli.fullplot + "</p>" + "IMDB rating " + peli.imdb + "</p>" + "Tomatoes rating " + peli.tomatoes + "</p>" + "Metacritic rating " + peli.metacritic + "</p>";
       })
       const divRes = document.getElementById("resultados");
       divRes.innerHTML = lista;
@@ -75,7 +75,7 @@ Randombutton.addEventListener('click', function(e) {
         method: 'POST',  
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
-          title: "TADW Presenta: " + data[0].title,
+          title: 'TADW Presenta: ' + data[0].title,
           fullplot: data[1].fullplot,
           cast: data[2].cast,
           poster: data[3].poster,
