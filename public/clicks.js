@@ -18,7 +18,7 @@ button.addEventListener('click', function(e) {
         {
             lista = lista + "<p>" + peli.title + " (" + peli.year + ") " + peli.runtime + " min" + "</p>";
         })
-        const divRes = document.getElementById("resultados_hardcode");
+        const divRes = document.getElementById("resultados");
         divRes.innerHTML = lista;
         return;
     } )
